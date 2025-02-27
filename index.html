@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                // Redirect to Google Play Store (Spotify as an example)
+                window.location.href = "https://play.google.com/store/apps/details?id=com.spotify.music";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Redirect to Apple App Store (Spotify as an example)
+                window.location.href = "https://apps.apple.com/app/id324684580";
+            } else {
+                // Optional: Redirect to a fallback page (like a website or a download page)
+                window.location.href = "https://www.spotify.com";
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Redirecting to the app store...</h1>
+</body>
+</html>
