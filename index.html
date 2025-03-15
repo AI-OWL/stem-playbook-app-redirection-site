@@ -9,14 +9,13 @@
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
             if (/android/i.test(userAgent)) {
-                // Redirect to Google Play Store (Spotify as an example)
-                window.location.href = "https://play.google.com/store/apps/details?id=com.spotify.music";
+                // We need to change with once we get it published to the Google Play store
             } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                // Redirect to Apple App Store (Spotify as an example)
-                window.location.href = "https://apps.apple.com/app/id324684580";
+                // Redirect to Apple App Store
+                window.location.href = "https://apps.apple.com/app/id6743141297";
             } else {
                 // Optional: Redirect to a fallback page (like a website or a download page)
-                window.location.href = "https://www.spotify.com";
+                window.location.href = "https://www.stemplaybook.org";
             }
         };
     </script>
